@@ -6,7 +6,7 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:58:38 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/08/29 00:22:46 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/08 16:34:11 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,14 @@ char	**ft_split(char const *str, char sep)
 	}
 	strings[i] = NULL;
 	return (strings);
+}
+
+void	free_ft_split(char **strings)
+{
+	while (*strings != NULL)
+	{
+		free(*strings);
+		strings++;
+	}
+	free(strings);
 }
