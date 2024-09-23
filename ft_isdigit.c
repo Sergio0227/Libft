@@ -6,12 +6,15 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 11:54:59 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/08/30 12:38:31 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:25:26 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+* The ft_isdigit function checks if a character is a digit (0-9).
+*/
 int	ft_isdigit(int c)
 {
 	if ((c >= '0' && c <= '9'))

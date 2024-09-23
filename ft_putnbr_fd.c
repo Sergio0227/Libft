@@ -6,12 +6,16 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:14:06 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/08/29 00:22:33 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:29:44 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+* The ft_putnbr_fd function writes the integer n to the file descriptor fd.
+* If n is negative, the '-' sign is written before the digits.
+*/
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

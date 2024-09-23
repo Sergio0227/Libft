@@ -6,12 +6,17 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 19:30:01 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/04/22 22:47:02 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:29:07 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+* The ft_memmove function copies n bytes from memory area src to memory  dest.
+* This function works similarly to ft_memcpy, but it handles overlapping
+* regions of memory.
+*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*s;

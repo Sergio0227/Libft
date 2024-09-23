@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_str_starts_with.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 12:04:30 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 22:22:35 by sandre-a         ###   ########.fr       */
+/*   Created: 2024/09/23 02:06:46 by sandre-a          #+#    #+#             */
+/*   Updated: 2024/09/23 02:32:23 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+* Determines whether the given string starts with a specified substring. 
+*/
 #include "libft.h"
 
-/*
-* The ft_isalnum function checks if a character is alphanumeric.
-*/
-int	ft_isalnum(int c)
+int	ft_str_starts_with(const char *str, const char *start)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	if (ft_strlen(str) < ft_strlen(start))
+		return (0);
+	while (*start)
+	{
+		if (*str != *start)
+			return (0);
+		start++;
+		str++;
+	}
+	return (1);
 }

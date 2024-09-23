@@ -6,12 +6,16 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 12:41:46 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/08/28 22:40:50 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:34:21 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+* The ft_strlcpy function copies up to size - 1 characters from the string
+*  src to the string dst, and always null-terminates dst.
+*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

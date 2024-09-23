@@ -40,7 +40,16 @@ SRC = 		ft_strlen.c  \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
-			ft_lstmap.c
+			ft_lstmap.c	\
+			ft_strcmp.c \
+			ft_strpbrk.c \
+			ft_strndup.c \
+			ft_str_rm_front_chars.c \
+			ft_strrev.c \
+			ft_strcount.c \
+			ft_str_ends_with.c \
+			ft_str_starts_with.c
+
 
 NAME = libft.a
 OBJS = ${SRC:.c=.o}

@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 12:04:30 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 22:22:35 by sandre-a         ###   ########.fr       */
+/*   Created: 2024/09/23 01:47:22 by sandre-a          #+#    #+#             */
+/*   Updated: 2024/09/23 01:57:45 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-* The ft_isalnum function checks if a character is alphanumeric.
-*/
-int	ft_isalnum(int c)
+ * The ft_strcount function returns the number of occurrences of the specified
+ * character in the given string.
+ */
+int	ft_strcount(const char *str, char c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	int	count;
+
+	count = 0;
+	while (*str)
+	{
+		if (*str == c)
+			count++;
+		str++;
+	}
+	return (count);
 }

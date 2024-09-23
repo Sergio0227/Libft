@@ -6,12 +6,17 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:09:32 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/08/28 22:40:24 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:36:11 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+* The ft_strtrim function allocates and returns a copy of the string s1 with 
+* leading and trailing characters removed. The characters to be removed are 
+* defined by the set of characters given in set.
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;

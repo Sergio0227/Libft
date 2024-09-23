@@ -6,12 +6,16 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:03:19 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/08/28 22:40:54 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:34:07 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+* The ft_strlcat function appends the string src to the end of dst,
+* and returns the total length of the resulting string.
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;

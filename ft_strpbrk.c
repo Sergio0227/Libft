@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 12:04:30 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 22:22:35 by sandre-a         ###   ########.fr       */
+/*   Created: 2024/09/22 23:33:36 by sandre-a          #+#    #+#             */
+/*   Updated: 2024/09/22 23:38:48 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-* The ft_isalnum function checks if a character is alphanumeric.
-*/
-int	ft_isalnum(int c)
+ * The ft_strpbrk function locates the first occurrence in the string s of any
+ * character that matches any character in the string c.
+ */
+char	*ft_strpbrk(const char *s, const char *c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	const char	*str;
+	int			i;
+
+	str = (const char *)s;
+	if (!s || !c)
+		return (NULL);
+	while (*str)
+	{
+		i = 0;
+		while (c[i])
+		{
+			if (*str == c[i])
+				return ((char *)str);
+			i++;
+		}
+		str++;
+	}
+	return (NULL);
 }

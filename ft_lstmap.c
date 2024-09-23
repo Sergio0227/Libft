@@ -6,12 +6,17 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 00:08:12 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/08/29 12:16:16 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:27:20 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+* The ft_lstmap function applies a function to each element of a list and 
+* creates a new list with the results.
+* If the function returns NULL for any element, the function frees the memory
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;

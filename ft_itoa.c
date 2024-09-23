@@ -6,7 +6,7 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:46:36 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/04/22 22:47:56 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:25:10 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ static int	count_digit(int n)
 	return (count);
 }
 
+/*
+* The ft_itoa function converts an integer to a string.
+*/
 char	*ft_itoa(int n)
 {
 	char	*numbers;

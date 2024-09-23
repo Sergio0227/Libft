@@ -6,12 +6,17 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 14:35:25 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/08/28 22:40:18 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:36:45 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+* The ft_substr function allocates and returns a new string which is a 
+* substring of the string given as argument. The substring begins at the
+* specified start index and has a maximum length of len characters.
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
