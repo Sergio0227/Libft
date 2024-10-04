@@ -6,7 +6,7 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:58:38 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 22:32:14 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:01:10 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ static char	*get_next_word(const char **str, char sep)
 }
 
 /*
-* The ft_split function splits a string into words,
-* and returns an array of strings.
-*/
+ * The ft_split function splits a string into words,
+ * and returns an array of strings.
+ */
 char	**ft_split(char const *str, char sep)
 {
 	char	**strings;
@@ -74,14 +74,17 @@ char	**ft_split(char const *str, char sep)
 }
 
 /*
-* The free_ft_split function frees the memory allocated for an array strings.
-*/
+ * The free_ft_split function frees the memory allocated for an array strings.
+ */
 void	free_ft_split(char **strings)
 {
-	while (*strings != NULL)
+	int	i;
+
+	i = 0;
+	while (strings[i])
 	{
-		free(*strings);
-		strings++;
+		free(strings[i]);
+		i++;
 	}
 	free(strings);
 }
