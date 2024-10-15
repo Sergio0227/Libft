@@ -6,7 +6,7 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:29:46 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 22:33:36 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/10/15 22:28:49 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new_str;
 	char	*start;
 
+	if (*s1 || *s2)
+		return (NULL);
 	t_s1 = (char *)s1;
 	t_s2 = (char *)s2;
 	new_str = malloc(sizeof(char) * (ft_strlen(t_s1) + ft_strlen(t_s2)) + 1);
@@ -30,17 +32,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	start = new_str;
 	while (*t_s1)
-	{
-		*new_str = *t_s1;
-		new_str++;
-		t_s1++;
-	}
+		*new_str++ = *t_s1++;
 	while (*t_s2)
-	{
-		*new_str = *t_s2;
-		new_str++;
-		t_s2++;
-	}
+		*new_str++ = *t_s2++;
 	*new_str = 0;
 	return (start);
 }
