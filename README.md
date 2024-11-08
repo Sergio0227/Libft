@@ -96,6 +96,15 @@ At 42 we're not allowed to use some standard libraries on our projects, so we ha
 - [x] [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list.
 - [x] [`ft_lstmap`](ft_lstmap.c)	- applies a function to each element of a list.
 
+## Additional functions
+
+- [x] [`ft_strpbrk`](ft_strpbrk.c) - searches a string for any of a set of bytes.
+- [x] [`ft_strndup`](ft_strndup.c) - duplicates up to `n` characters of a string.
+- [x] [`ft_str_rm_front_chars`](ft_str_rm_front_chars.c) - removes a specified number of characters from the start of a string.
+- [x] [`ft_strrev`](ft_strrev.c) - reverses the characters in a string.
+- [x] [`ft_strcount`](ft_strcount.c) - counts occurrences of a specific character in a string.
+- [x] [`ft_str_ends_with`](ft_str_ends_with.c) - checks if a string ends with a specified suffix.
+- [x] [`ft_str_starts_with`](ft_str_starts_with.c) - checks if a string starts with a specified prefix.
 ---
 
 
