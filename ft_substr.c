@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sandre-a <sandre-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 14:35:25 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 22:36:45 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/12/30 12:43:21 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 /*
 * The ft_substr function allocates and returns a new string which is a 

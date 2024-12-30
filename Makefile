@@ -48,7 +48,9 @@ SRC = 		ft_strlen.c  \
 			ft_strrev.c \
 			ft_strcount.c \
 			ft_str_ends_with.c \
-			ft_str_starts_with.c
+			ft_str_starts_with.c \
+			get_next_line.c \
+			get_next_line_utils.c
 
 
 NAME = libft.a

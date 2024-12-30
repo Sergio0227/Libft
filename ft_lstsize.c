@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sandre-a <sandre-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 23:37:28 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 22:31:12 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/12/30 12:42:54 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 /*
 * The ft_lstsize function returns the number of elements in a list.

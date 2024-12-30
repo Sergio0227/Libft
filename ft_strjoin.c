@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sandre-a <sandre-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:29:46 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/10/15 22:32:46 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/12/30 12:43:15 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 /*
 * The ft_strjoin function allocates (with malloc()) and returns a new string 

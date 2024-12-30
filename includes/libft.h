@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sandre-a <sandre-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:31:19 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/23 02:34:41 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/12/30 13:17:51 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "get_next_line.h"
 
 // cytpe.h
 int					ft_isalpha(int c);
@@ -76,6 +77,7 @@ typedef struct s_list
 	struct s_list	*next;
 	struct s_list	*prev;
 }					t_list;
+
 int					ft_lstsize(t_list *lst);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstadd_back(t_list **lst, t_list *new);

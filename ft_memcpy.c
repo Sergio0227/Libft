@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sandre-a <sandre-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:44:54 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 22:28:21 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/12/30 12:43:06 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 /*
 * The ft_memcpy function copies n bytes from memory area src to area dest.

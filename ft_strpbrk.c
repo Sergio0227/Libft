@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sandre-a <sandre-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 23:33:36 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/22 23:38:48 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/12/30 12:43:19 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 /*
  * The ft_strpbrk function locates the first occurrence in the string s of any

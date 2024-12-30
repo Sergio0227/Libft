@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_starts_with.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sandre-a <sandre-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 02:06:46 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/09/23 02:32:23 by sandre-a         ###   ########.fr       */
+/*   Updated: 2024/12/30 12:43:12 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "includes/libft.h"
 
 /*
 * Determines whether the given string starts with a specified substring. 
 */
-#include "libft.h"
 
 int	ft_str_starts_with(const char *str, const char *start)
 {
