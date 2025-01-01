@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sandre-a <sandre-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 12:59:28 by sandre-a          #+#    #+#             */
-/*   Updated: 2024/12/30 13:27:33 by sandre-a         ###   ########.fr       */
+/*   Updated: 2025/01/01 18:17:49 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,80 +14,86 @@
 
 char	*get_next_line(int fd)
 {
-	static t_gnl_list	*lst = NULL;
-	char				*line;
-	int					len;
+	static t_list	*stash;
+	char			*line;
 
-	line = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	read_line(fd, &lst);
-	len = length_to_nl(lst);
-	if (!lst || !len)
+	init_stash(&stash, fd);
+	if (!stash)
 		return (NULL);
-	line = populate_string(lst, len);
-	clean_memory(&lst);
-	if (lst)
-		save_node(&lst);
+	line = extract_line(stash);
+	clean(&stash);
 	return (line);
 }
 
-void	read_line(int fd, t_gnl_list **lst)
+void	init_stash(t_list **stash, int fd)
 {
-	int		chars_read;
+	int		counter;
 	char	*buffer;
 
-	while (1)
+	while (!found_nl(*stash))
 	{
-		buffer = malloc(BUFFER_SIZE + 1);
+		buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 		if (!buffer)
 			return ;
-		chars_read = read(fd, buffer, BUFFER_SIZE);
-		if (chars_read <= 0)
+		counter = read(fd, buffer, BUFFER_SIZE);
+		if (counter <= 0)
 		{
 			free(buffer);
-			break ;
+			return ;
 		}
-		buffer[chars_read] = '\0';
-		stash_into_list(lst, buffer);
-		if (has_new_line(buffer))
-			break ;
+		buffer[counter] = 0;
+		append(stash, buffer);
 	}
 }
 
-void	stash_into_list(t_gnl_list **lst, char *buffer)
+int	found_nl(t_list *stash)
 {
-	t_gnl_list	*new_node;
-	t_gnl_list	*temp;
+	int	i;
 
-	new_node = malloc(sizeof(t_gnl_list));
-	if (!new_node)
+	while (stash)
 	{
-		free(buffer);
+		i = 0;
+		while (stash->content[i] && i < BUFFER_SIZE)
+		{
+			if (stash->content[i] == '\n')
+				return (1);
+			i++;
+		}
+		stash = stash->next;
+	}
+	return (0);
+}
+
+void	append(t_list **stash, char *buffer)
+{
+	t_list	*new;
+	t_list	*last;
+
+	last = get_last_node(*stash);
+	new = malloc(sizeof(t_list));
+	if (!new)
 		return ;
-	}
-	new_node->str = buffer;
-	new_node->next = NULL;
-	if (!*lst)
-		*lst = new_node;
+	if (!last)
+		*stash = new;
 	else
-	{
-		temp = *lst;
-		while (temp->next)
-			temp = temp->next;
-		temp->next = new_node;
-	}
+		last->next = new;
+	new->content = buffer;
+	new->next = NULL;
 }
 
-void	clean_memory(t_gnl_list **lst)
+char	*extract_line(t_list *stash)
 {
-	t_gnl_list	*temp;
+	int		length;
+	char	*line;
 
-	while (*lst && !has_new_line((*lst)->str))
-	{
-		temp = *lst;
-		*lst = (*lst)->next;
-		free(temp->str);
-		free(temp);
-	}
+	if (!stash)
+		return (NULL);
+	length = len_to_nl(stash);
+	line = malloc(sizeof(char) * (length + 1));
+	if (!line)
+		return (NULL);
+	copy_str(stash, line);
+	return (line);
 }
