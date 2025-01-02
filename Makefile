@@ -19,6 +19,7 @@ SRC = 		ft_strlen.c  \
 			ft_memcmp.c \
 			ft_strnstr.c \
 			ft_atoi.c \
+			custom_atol.c \
 			ft_calloc.c \
 			ft_strdup.c \
 			ft_substr.c \

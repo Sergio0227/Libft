@@ -49,7 +49,7 @@ void				ft_bzero(void *s, size_t n);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *str);
-
+long				custom_atol(const char *nptr);
 // Non-standard functions//////////////////////////////////////////////////////
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
