@@ -35,7 +35,7 @@ long	custom_atol(const char *nptr)
 		result += *nptr - '0';
 		nptr++;
 	}
-	if (*nptr != 0 && *nptr != '\n' && *nptr != '32')
+	if (*nptr != 0 && (*nptr != '\n' && *nptr != '32'))
 		return (LONG_MIN);
 	result *= sign;
 	return (result);
