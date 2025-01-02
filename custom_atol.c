@@ -6,7 +6,7 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 18:38:09 by sandre-a          #+#    #+#             */
-/*   Updated: 2025/01/02 19:45:00 by sandre-a         ###   ########.fr       */
+/*   Updated: 2025/01/02 19:47:32 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ long	custom_atol(const char *nptr)
 		result += *nptr - '0';
 		nptr++;
 	}
-	if (ft_isalpha(*nptr) || !(*nptr == ' ' && *nptr == ' '))
+	if (ft_isalpha(*nptr) || (*nptr != '\n' && *nptr != ' '))
 		return (LONG_MIN);
 	result *= sign;
 	return (result);
