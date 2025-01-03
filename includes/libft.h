@@ -67,6 +67,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putendl_fd(char *s, int fd);
 char				*ft_str_rm_front_chars(char *str, int n);
 char				*ft_strrev(char *str);
+int					ft_strcount_charset(const char *str, char *charset);
 int					ft_strcount(const char *str, char c);
 int					ft_str_starts_with(const char *str, const char *start);
 int					ft_str_ends_with(const char *str, const char *start);

@@ -49,6 +49,7 @@ SRC = 		ft_strlen.c  \
 			ft_str_rm_front_chars.c \
 			ft_strrev.c \
 			ft_strcount.c \
+			ft_strcount_charset.c \
 			ft_str_ends_with.c \
 			ft_str_starts_with.c \
 			get_next_line.c \
