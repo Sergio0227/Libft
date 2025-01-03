@@ -25,8 +25,8 @@ int	ft_strcount_charset(const char *str, char *charset)
 	while (*str)
 	{
 		i = -1;
-		while (charset[i])
-			if (*str == charset[++i])
+		while (charset[++i])
+			if (*str == charset[i])
 				count++;
 		str++;
 	}
