@@ -6,7 +6,7 @@
 /*   By: sandre-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:31:19 by sandre-a          #+#    #+#             */
-/*   Updated: 2025/01/02 22:51:12 by sandre-a         ###   ########.fr       */
+/*   Updated: 2025/01/06 21:12:59 by sandre-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int					ft_toupper(int c);
 
 // Functions from <stdlib.h>///////////////////////////////////////////////////
 int					ft_atoi(const char *nptr);
+long				ft_atol(const char *nptr);
 void				*ft_calloc(size_t nmemb, size_t size);
 
 // Functions from <string.h>///////////////////////////////////////////////////
