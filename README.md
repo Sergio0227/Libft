@@ -106,6 +106,10 @@ At 42 we're not allowed to use some standard libraries on our projects, so we ha
 - [x] [`ft_str_ends_with`](ft_str_ends_with.c) - checks if a string ends with a specified suffix.
 - [x] [`ft_str_starts_with`](ft_str_starts_with.c) - checks if a string starts with a specified prefix.
 ---
+## Ft_Printf
+- [x] [`ft_printf`](ft_printf.c) - The printf function outputs formatted text to the standard output (console).
 
-
+## Get Next Line
+- [x] [`get_next_line`](get_next_line.c) - The get_next_line function reads a line of text from a file descriptor, 
+  typically from standard input, until a newline or end-of-file is encountered.
 
