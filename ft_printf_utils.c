@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 20:10:56 by sandre-a          #+#    #+#             */
-/*   Updated: 2025/01/20 14:25:57 by sergio           ###   ########.fr       */
+/*   Updated: 2025/01/20 15:26:41 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	ft_putnbr(long nbr, t_prtf *data)
 	else
 		data->length += ft_putchar(nbr % 10 + 48);
 }
+
 int	ft_putaddres(unsigned long long address)
 {
 	int	count;

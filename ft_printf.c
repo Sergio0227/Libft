@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 18:54:00 by sandre-a          #+#    #+#             */
-/*   Updated: 2025/01/20 14:22:49 by sergio           ###   ########.fr       */
+/*   Updated: 2025/01/20 15:27:05 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,3 @@ static void	check_specifier(char specifier, t_prtf *data)
 	if (specifier == '%')
 		data->length += ft_putchar('%');
 }
-
-
